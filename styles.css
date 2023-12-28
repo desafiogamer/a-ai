@@ -504,10 +504,10 @@ header{
     #CoposLinksTwo{
         display: flex;
         position: fixed;
-        top: 115px;
+        top: 113px;
         width: 100%;
         background: rgb(30, 0, 36);
-        border-top: 1px solid black;
+        border-top: 1px solid #000000;
         display: flex;
         justify-content: space-evenly;
         padding: 10px;
