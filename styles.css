@@ -1,0 +1,1046 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    outline: none;
+}
+
+:root {
+    --text-color: #ededed;
+    --main-second-color: #40004d;
+    --bg: #000000;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 0px 50px;
+    z-index: 99;
+    background: #40004d;
+}
+
+#CoposLinks{
+    display: flex;
+    height: 0;
+    flex-direction: column;
+    position: absolute;
+    bottom: -150px;
+    background: #40004d;
+    overflow: hidden;
+}
+
+#CoposLinks a{
+    font-size: 17px;
+    font-weight: lighter;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    color: #ffffffb7;
+}
+
+#CoposLinks a:hover {
+    color: #00f800;
+}
+
+
+.cpPronto:hover ~ #CoposLinks{
+    height: auto;
+}
+
+#CoposLinks:hover{
+    height: auto;
+}
+
+.shopping img{
+    width: 70px;
+}
+
+.links {
+    display: flex;
+}
+
+.links a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: .4s;
+    margin-top: 5px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.links a:nth-child(3) {
+    margin-right: 30px;
+}
+
+.links a:hover{
+    color: rgb(181, 0, 197);
+}
+
+.carrinho{
+    color: white;
+    cursor: pointer;
+    background: #ff3300;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.produtos{
+    min-height: 100vh;
+    padding-top: 120px;
+    background: linear-gradient(#e6b3d0,10%,#ffedf7);
+}
+
+.titulo1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    padding-bottom: 40px;
+    font-family: 'PT Serif', serif;
+}
+
+.titulo1 span{
+    color: #007732;
+    margin-left: 10px;
+}
+
+.list{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    background: #d29bb9;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #40004d31;
+}
+
+.Copos{
+    padding: 10px;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item:nth-child(1) .Copos {
+    background: #af009291;
+}
+
+.item:nth-child(2) .Copos {
+    background: #af009291;
+}
+
+.item:nth-child(3) .Copos {
+    background: #af009291;
+}
+
+.item:nth-child(4) .Copos {
+    background: #af009291;
+}
+
+.CoposEspecial{
+    padding: 10px;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item:nth-child(1) .CoposEspecial {
+    background: #af009291;
+}
+
+.item:nth-child(2) .CoposEspecial {
+    background: #af009291;
+}
+
+.CoposProntos {
+    padding: 10px;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item img{
+    width: 70%;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.title{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'PT Serif', serif;
+}
+
+.descricao{
+    width: 300px;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.rodape{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn button{
+    background: #40ff2f;
+    border: none;
+    width: 40px;
+    height: 40px;
+    color: #000000c2;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.589);
+    padding: 5px;
+    border-radius: 50%;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.btn button:hover{
+    background: #0c8f00;
+    color: white;
+}
+
+.quantidade{
+    display: block;
+}
+
+.card{
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 400px;
+    padding-top: 100px;
+    top: 0;
+    right: 0;
+    background: linear-gradient(#002435,#0087c5);
+    overflow-y: auto;
+    animation: aparecer .3s linear;
+}
+
+.listCard li{
+    background: rgb(191, 242, 255);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 60px;
+}
+
+.listCard li img{
+    width: 260px;
+    height: 220px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+}
+
+.card.ativo{
+    display: flex;
+}
+
+.card h1{
+    color: white;
+    margin-bottom: 10px;
+}
+
+.cardTitle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+}
+
+.quantidade{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-top: 20px;
+    background: #005e8a;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.quantidade div{
+    display: flex;
+    align-items: center;
+}
+
+.cardButton{
+    display: flex;
+    justify-content: center;
+    background: #ff0000b0;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.cardButton:last-child{
+    background: #00f800;
+}
+
+
+.checkOut{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 400px;
+    bottom: 0px;
+    right: 0px;
+}
+
+.checkOut a {
+    color: white;
+    text-decoration: none;
+    background: red;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.total{
+    background: greenyellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.especial{
+    min-height: 100vh;
+    padding-top: 100px;
+    background: linear-gradient(#e6b3d0, 10%, #ffedf7);
+}
+
+.listTwo {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.titulo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    padding: 80px 0 60px;
+}
+
+.adicionais{
+    background: linear-gradient(#e6b3d0, 10%, #ffedf7);
+}
+
+.listThree{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.montar{
+    padding-top: 100px;
+    background: linear-gradient(#e6b3d0, 10%, #ffedf7);
+}
+
+.rodapeTwo{
+    margin-bottom: 10px;
+}
+
+.endereco{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 90%;
+    width: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--main-second-color);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1;
+    padding-bottom: 50px;
+    opacity: 0;
+    transition: .3s;
+}
+
+.endereco .voltar{
+    width: 38px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 330px;
+}
+
+.endereco input{
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.endereco button{
+    background: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 1px solid black;
+    outline: none;
+    color: black;
+    margin-top: 70px;
+    cursor: pointer;
+}
+
+.endereco.ativo{
+    opacity: 1;
+    width: 400px;
+}
+
+.finali{
+    cursor: pointer;
+}
+
+#Select{
+    outline: none;
+    margin-bottom: 20px;
+}
+
+#CoposLinksTwo {
+    display: none;
+}
+
+.outrosLinks{
+    display: none;
+}
+
+
+@media(max-width: 1068px) {
+    .list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .listTwo{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .listThree{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 768px) {
+
+    header{
+        border-bottom: 1px solid black;
+    }
+
+    .links{
+        display: none;
+    }
+
+    .outrosLinks{
+        display: flex;
+        position: fixed;
+        top: 75px;
+        width: 100%;
+        background: rgb(30, 0, 36);
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px;
+        z-index: 9;
+    }
+
+    .outrosLinks a{
+        text-decoration: none;
+        color: white;
+    }
+
+    #CoposLinksTwo{
+        display: flex;
+        position: fixed;
+        top: 115px;
+        width: 100%;
+        background: rgb(30, 0, 36);
+        border-top: 1px solid black;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px;
+        z-index: 9;
+    }
+
+    #CoposLinksTwo a{
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.541);
+    }
+
+    .list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .titulo1{
+        font-size: 35px;
+        padding-top: 60px;
+    }
+
+    .item{
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .CoposProntos{
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: baseline;
+    }
+
+    .CoposProntos img{
+        width: 200px;
+        margin: 0;
+    }
+
+    .CoposProntos .title{
+        position: absolute;
+        left: 240px;
+    }
+
+    .CoposProntos .descricao{
+        position: absolute;
+        top: 40px;
+        left: 240px;
+    }
+
+    .CoposProntos .rodape{
+        position: absolute;
+        top: 160px;
+        left: 240px;
+        width: 300px;
+    }
+
+    .CoposProntos .btn{
+        display: block;
+        margin-top: 10px;
+        padding-left: 60px;
+
+    }
+
+    .CoposEspecial {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: baseline;
+    }
+
+    .CoposEspecial img{
+        width: 200px;
+        margin: 0;
+    }
+
+    .CoposEspecial img {
+        width: 200px;
+        margin: 0;
+    }
+
+    .CoposEspecial .title{
+        position: absolute;
+        left: 240px;
+    }
+
+    .CoposEspecial .descricao{
+        position: absolute;
+        top: 40px;
+        left: 240px;
+    }
+
+    .CoposEspecial .rodape{
+        position: absolute;
+        top: 160px;
+        left: 240px;
+        width: 300px;
+    }
+
+    .CoposEspecial .btn{
+        display: block;
+        margin-top: 10px;
+        padding-left: 60px;
+
+    }
+
+    .Copos{
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: baseline;
+    }
+
+    .Copos img{
+        width: 200px;
+        height: 200px;
+        margin: 0;
+    }
+
+    .Copos .title{
+        position: absolute;
+        left: 240px;
+    }
+
+    .Copos .descricao{
+        position: absolute;
+        top: 40px;
+        left: 240px;
+    }
+
+    .Copos .rodapeTwo{
+        position: absolute;
+        top: 160px;
+        left: 240px;
+        width: 300px;
+    }
+
+    .Copos .btn{
+        display: block;
+        margin-top: 10px;
+        padding-left: 60px;
+
+    }
+
+    .listTwo {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .listThree {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card{
+        padding-top: 100px;
+        width: 340px;
+        z-index: 20;
+    }
+
+    .listCard li img{
+        width: 170px;
+        height: 150px;
+    }
+
+    .quantidade{
+        flex-direction: column-reverse;
+    }
+
+    .cardPrice{
+        margin-bottom: 10px;
+    }
+
+    .checkOut{
+        background: #1e001f;
+        width: 340px;
+    }
+
+    .endereco.ativo{
+        width: 340px;
+        padding-top: 20px;
+        overflow-y: auto;
+        z-index: 30;
+    }
+
+    .endereco button{
+        margin-top: 30px;
+    }
+
+    .endereco .voltar{
+        width: 30px;
+        height: 50px;
+        border-radius: 50%;
+        margin-top: 20px;
+        margin-left: 290px;
+    }
+}
+
+@media(max-width: 611px) {
+
+    .CoposProntos .descricao{
+        position: absolute;
+        top: 40px;
+        left: 240px;
+        width: 260px;
+    }
+
+    .CoposProntos .rodape{
+        position: absolute;
+        top: 160px;
+        left: 240px;
+        width: 260px;
+    }
+
+    .CoposEspecial .descricao{
+        position: absolute;
+        top: 40px;
+        left: 240px;
+        width: 260px;
+    }
+
+    .CoposEspecial .rodape{
+        position: absolute;
+        top: 160px;
+        left: 240px;
+        width: 260px;
+    }
+
+    .Copos .descricao{
+        position: absolute;
+        top: 40px;
+        left: 240px;
+        width: 260px;
+    }
+
+    .Copos .rodapeTwo{
+        position: absolute;
+        top: 160px;
+        left: 240px;
+        width: 260px;
+    }
+}
+
+@media(max-width: 570px) {
+
+    .titulo1{
+        padding: 10px 0;
+        padding-top: 60px;
+    }
+
+    .CoposProntos .descricao {
+        position: absolute;
+        top: 40px;
+        left: 240px;
+        width: 230px;
+    }
+
+    .CoposProntos .rodape {
+        position: absolute;
+        top: 160px;
+        left: 240px;
+        width: 230px;
+    }
+
+    .CoposEspecial .descricao {
+        position: absolute;
+        top: 40px;
+        left: 240px;
+        width: 230px;
+    }
+
+    .CoposEspecial .rodape {
+        position: absolute;
+        top: 160px;
+        left: 240px;
+        width: 230px;
+    }
+
+    .Copos .descricao {
+        position: absolute;
+        top: 40px;
+        left: 240px;
+        width: 230px;
+    }
+
+    .Copos .rodapeTwo{
+        position: absolute;
+        top: 160px;
+        left: 240px;
+        width: 230px;
+    }
+}
+
+@media(max-width: 530px) {
+
+    .CoposProntos .descricao {
+        position: absolute;
+        top: 40px;
+        left: 220px;
+        width: 200px;
+    }
+
+    .CoposProntos .rodape {
+        position: absolute;
+        top: 160px;
+        left: 220px;
+        width: 200px;
+    }
+
+    .CoposEspecial .descricao {
+        position: absolute;
+        top: 40px;
+        left: 220px;
+        width: 200px;
+    }
+
+    .CoposEspecial .rodape {
+        position: absolute;
+        top: 160px;
+        left: 220px;
+        width: 200px;
+    }
+
+    .Copos .descricao {
+        position: absolute;
+        top: 40px;
+        left: 220px;
+        width: 200px;
+    }
+
+    .Copos .rodapeTwo{
+        position: absolute;
+        top: 160px;
+        left: 220px;
+        width: 200px;
+    }
+}
+
+@media(max-width: 477px) {
+
+    #CoposLinksTwo a{
+        font-size: 14px;
+    }
+
+    .titulo1{
+        font-size: 35px;
+    }
+
+    .item{
+        width: 90%;
+        margin: 20px auto;
+        padding-top: 40px;
+    }
+
+    .CoposProntos{
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: baseline;
+    }
+
+    .CoposProntos img{
+        width: 100px;
+        height: 100px;
+        margin: 0;
+        box-shadow: 0 0 10px black;
+    }
+
+    .CoposProntos .title{
+        position: absolute;
+        top: -25px;
+        left: 10px;
+    }
+
+    .CoposProntos .descricao{
+        position: absolute;
+        width: auto;
+        top: 0px;
+        left: 120px;
+        height: 100px;
+        background: transparent;
+    }
+
+    .CoposProntos .rodape{
+        display: flex;
+        justify-content: baseline;
+        top: 130px;
+        left: 30px;
+    }
+    
+    .CoposProntos .rodape .valor1{
+        display: none;
+    }
+
+    .CoposProntos .btn{
+        display: block;
+        margin-top: 10px;
+        padding-left: 270px;
+    }
+
+    .CoposEspecial{
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: baseline;
+    }
+
+    .CoposEspecial img{
+        width: 100px;
+        height: 100px;
+        margin: 0;
+        box-shadow: 0 0 10px black;
+    }
+
+    .CoposEspecial .title{
+        position: absolute;
+        top: -25px;
+        left: 10px;
+    }
+
+    .CoposEspecial .descricao{
+        position: absolute;
+        width: auto;
+        top: 0px;
+        left: 120px;
+        height: 100px;
+        background: transparent;
+    }
+
+    .CoposEspecial .rodape{
+        display: flex;
+        justify-content: baseline;
+        top: 130px;
+        left: 30px;
+    }
+    
+    .CoposEspecial .rodape .valor1{
+        display: none;
+    }
+
+    .CoposEspecial .btn{
+        display: block;
+        margin-top: 10px;
+        padding-left: 270px;
+    }
+
+    .Copos{
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: baseline;
+    }
+
+    .Copos img{
+        width: 100px;
+        height: 100px;
+        margin: 0;
+        box-shadow: 0 0 10px black;
+    }
+
+    .Copos .title{
+        position: absolute;
+        top: -25px;
+        left: 10px;
+    }
+
+    .Copos .descricao{
+        position: absolute;
+        width: auto;
+        top: 0px;
+        left: 120px;
+        height: 100px;
+        background: transparent;
+    }
+
+    .Copos .rodapeTwo{
+        display: flex;
+        justify-content: baseline;
+        top: 130px;
+        left: 30px;
+    }
+    
+    .Copos .rodapeTwo .valor1{
+        display: none;
+    }
+
+    .Copos .btn{
+        display: block;
+        margin-top: 10px;
+        padding-left: 270px;
+    }
+
+    .price{
+        font-weight: bold;
+    }
+
+    .btn{
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .btn button{
+        width: 30px;
+        height: 30px;
+        margin: 0;
+    }
+}
+
+@media(max-width: 407px) {
+    .titulo1{
+        font-size: 25px;
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    .checkOut{
+        background: #1e001f;
+        width: 100%;
+    }
+
+    .endereco.ativo{
+        width: 100%;
+        z-index: 30;
+    }
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translate3d(20px, 0, -5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate3d(0, 0, 0);
+    }
+}
